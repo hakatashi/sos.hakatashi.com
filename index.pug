@@ -1,6 +1,9 @@
 doctype
 html
 	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Send SOS to hakatashi
 		link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css')
 		link(rel='stylesheet', href='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css')
@@ -9,6 +12,7 @@ html
 		script(src='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js')
 		script(src='index.js')
 	body
+		include icon.svg
 		.description
 			:markdown-it
 				# Send SOS to hakatashi
@@ -33,14 +37,23 @@ html
 				* hakatashiにPushBulletでメッセージを送信
 				* hakatashiに[Yo](https://www.justyo.co/)を送信
 
+				SOSを送信するには以下のフォームを埋めて送信ボタンを押してください。
+
 		form
 			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
 				textarea.mdl-textfield__input(type='text', rows=5, id='text', required)
 				label.mdl-textfield__label(for='text') メッセージ
 				span.mdl-textfield__error メッセージを入力してください
 
-			p 「SOS」を表すUnicode文字を入力してください。
+			p.sos-label 「SOS」を表すUnicode文字を入力してください。
 
-			.mdl-textfield.mdl-js-textfield
-				input.mdl-textfield__input(type='text', id='key', pattern='[0-9A-F]{4}')
+			.sos-field.mdl-textfield.mdl-js-textfield
+				.sos-wrap
+					| U+
+					input.sos-input.mdl-textfield__input(type='text', id='key', pattern='[0-9a-fA-F]{4,5}', required)
 				span.mdl-textfield__error 有効なコードポイントを指定してください
+
+			.button-area
+				button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent SOSを送信する
+
+			p 同一IPからSOSを送信できるのは1日に3回までです。(送信失敗含む)
