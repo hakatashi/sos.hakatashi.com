@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lsc": "lsc -co . .",
+    "pug": "pug index.pug",
+    "less": "lessc index.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

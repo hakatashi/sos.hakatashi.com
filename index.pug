@@ -1,0 +1,46 @@
+doctype
+html
+	head
+		link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css')
+		link(rel='stylesheet', href='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css')
+		link(rel='stylesheet', href='index.css')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js')
+		script(src='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js')
+		script(src='index.js')
+	body
+		.description
+			:markdown-it
+				# Send SOS to hakatashi
+
+				このページは、[@hakatashi](https://twitter.com/hakatashi)に超緊急のメッセージを送信するためのページです。
+
+				以下のような場合にお使いください。
+
+				* hakatashiが待ち合わせに現れない。連絡もつかないしどう考えても寝坊している。
+				* hakatashiが管理しているサーバーが落ちている。10分以内に再稼働しないと地球がヤバい。
+
+				このページからSOSを送信すると、以下の処理が**全て**行われます。
+
+				* hakatashi宅のRaspberryPiからブザー鳴動
+				* hakatashiのスマホのマナーモードを解除
+				* hakatashiのスマホにSMSを送信
+				* hakatashiのスマホに通知を送信
+				* hakatashiのスマホから[Avicii](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%81%E3%83%BC)の楽曲をランダムに再生
+				* hakatashi宛にTwitterでDMを送信
+				* hakatashiのメールアドレス宛にメールを送信
+				* hakatashiにSlackでメッセージを送信
+				* hakatashiにPushBulletでメッセージを送信
+				* hakatashiに[Yo](https://www.justyo.co/)を送信
+
+		form
+			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+				textarea.mdl-textfield__input(type='text', rows=5, id='text', required)
+				label.mdl-textfield__label(for='text') メッセージ
+				span.mdl-textfield__error メッセージを入力してください
+
+			p 「SOS」を表すUnicode文字を入力してください。
+
+			.mdl-textfield.mdl-js-textfield
+				input.mdl-textfield__input(type='text', id='key', pattern='[0-9A-F]{4}')
+				span.mdl-textfield__error 有効なコードポイントを指定してください
