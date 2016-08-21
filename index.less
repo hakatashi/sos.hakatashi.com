@@ -34,6 +34,46 @@ h1 {
 	width: 50vw;
 }
 
+.head-wrap {
+	position: relative;
+	margin-bottom: 3em;
+
+	&, & h1 {
+		display: inline-block;
+	}
+
+	h1 {
+		margin: 0;
+		line-height: 1em;
+	}
+
+	.morse {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+
+		@size: 8px;
+
+		height: @size;
+		display: flex;
+		justify-content: space-between;
+
+		& > * {
+			border-radius: @size / 2;
+			background: #4e4e4e;
+		}
+
+		.dot {
+			width: @size;
+		}
+
+		.dash {
+			width: 60px;
+		}
+	}
+}
+
 form {
 	.sos-label {
 		margin: 16px 0 0;

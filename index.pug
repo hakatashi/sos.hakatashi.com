@@ -13,20 +13,35 @@ html
 		script(src='index.js')
 	body
 		include icon.svg
+
+		.head-area
+			.head-wrap
+				h1 Send SOS to hakatashi
+
+				.morse
+					.dot
+					.dot
+					.dot
+					.dash
+					.dash
+					.dash
+					.dot
+					.dot
+					.dot
+
 		.description
 			:markdown-it
-				# Send SOS to hakatashi
-
 				このページは、[@hakatashi](https://twitter.com/hakatashi)に超緊急のメッセージを送信するためのページです。
 
 				以下のような場合にお使いください。
 
 				* hakatashiが待ち合わせに現れない。連絡もつかないしどう考えても寝坊している。
+				* 鍵のかかった部屋から煙が出ている。中を確かめたいが鍵はhakatashiが持っている。
 				* hakatashiが管理しているサーバーが落ちている。10分以内に再稼働しないと地球がヤバい。
 
 				このページからSOSを送信すると、以下の処理が**全て**行われます。
 
-				* hakatashi宅のRaspberryPiからブザー鳴動
+				* hakatashi宅のRaspberryPiから大音量でブザー鳴動
 				* hakatashiのスマホのマナーモードを解除
 				* hakatashiのスマホにSMSを送信
 				* hakatashiのスマホに通知を送信
@@ -56,4 +71,4 @@ html
 			.button-area
 				button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent SOSを送信する
 
-			p 同一IPからSOSを送信できるのは1日に3回までです。(送信失敗含む)
+			p 同一IPからSOSを送信できるのは1日に3回までです。(認証失敗・送信失敗を含む)
