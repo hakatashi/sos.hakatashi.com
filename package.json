@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/hakatashi/sos.hakatashi.com/issues"
   },
-  "homepage": "https://github.com/hakatashi/sos.hakatashi.com#readme"
+  "homepage": "https://github.com/hakatashi/sos.hakatashi.com#readme",
+  "devDependencies": {
+    "jstransformer-markdown-it": "^0.2.3",
+    "less": "^2.7.1",
+    "livescript": "^1.5.0",
+    "pug": "^2.0.0-beta5"
+  }
 }
