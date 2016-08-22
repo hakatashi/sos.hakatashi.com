@@ -25,6 +25,6 @@
     "jstransformer-markdown-it": "^0.2.3",
     "less": "^2.7.1",
     "livescript": "^1.5.0",
-    "pug": "^2.0.0-beta5"
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
