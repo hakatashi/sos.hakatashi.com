@@ -57,7 +57,7 @@ html
 
 		form
 			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-				textarea.mdl-textfield__input(type='text', rows=5, id='text', required)
+				textarea.mdl-textfield__input(type='text', rows=5, name='text', required)
 				label.mdl-textfield__label(for='text') メッセージ
 				span.mdl-textfield__error メッセージを入力してください
 
@@ -66,7 +66,7 @@ html
 			.sos-field.mdl-textfield.mdl-js-textfield
 				.sos-wrap
 					| U+
-					input.sos-input.mdl-textfield__input(type='text', id='key', pattern='[0-9a-fA-F]{4,5}', required)
+					input.sos-input.mdl-textfield__input(type='text', name='key', pattern='[0-9a-fA-F]{4,5}', required)
 				span.mdl-textfield__error 有効なコードポイントを指定してください
 
 			.button-area
@@ -84,6 +84,7 @@ html
 
 		dialog.result.mdl-dialog
 			h2.mdl-dialog__title 送信結果
-			.mdl-dialog__content
+			.mdl-dialog__content.in-progress
+				.mdl-spinner.mdl-js-spinner.is-active
 			.mdl-dialog__actions
 				button.close.mdl-button OK
