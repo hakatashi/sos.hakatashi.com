@@ -41,10 +41,15 @@ $ document .ready ->
     $list = $ 'dialog.result .mdl-list'
     $list.empty!
 
+    form-data = $ 'form' .serialize-array!map (input) ->
+      if input.name is 'key'
+        input.value .= to-upper-case!
+      return input
+
     $.ajax do
       type: 'POST'
       url: 'https://api.hakatashi.com/sos/send'
-      data: $ 'form' .serialize!
+      data: form-data
       data-type: 'json'
 
       error: (xhr, errorType, error) ->
