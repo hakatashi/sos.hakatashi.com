@@ -6,10 +6,10 @@ html
 		title Send SOS to hakatashi
 		link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css')
-		link(rel='stylesheet', href='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css')
+		link(rel='stylesheet', href='https://code.getmdl.io/1.2.0/material.indigo-pink.min.css')
 		link(rel='stylesheet', href='index.css')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js')
-		script(src='https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js')
+		script(src='https://code.getmdl.io/1.2.0/material.min.js', defer=true)
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js')
 		script(src='index.js')
 	body
@@ -73,3 +73,17 @@ html
 				button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent SOSを送信する
 
 			p 同一IPからSOSを送信できるのは1日に3回までです。(認証失敗・送信失敗を含む)
+
+		dialog.confirm.mdl-dialog
+			h2.mdl-dialog__title 送信確認
+			.mdl-dialog__content
+				p 本当にSOSを送信しますか? 同一IPからSOSを送信できるのは1日に3回までです。(認証失敗・送信失敗を含む)
+			.mdl-dialog__actions
+				button.submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--primary 送信する
+				button.close.mdl-button やめる
+
+		dialog.result.mdl-dialog
+			h2.mdl-dialog__title 送信結果
+			.mdl-dialog__content
+			.mdl-dialog__actions
+				button.close.mdl-button OK
