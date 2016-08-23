@@ -6,7 +6,7 @@
   "scripts": {
     "lsc": "lsc -co . .",
     "pug": "pug index.pug",
-    "pcss": "postcss -u precss -u postcss-calc -u postcss-import-url -u autoprefixer -o index.css index.pcss",
+    "pcss": "postcss -u precss -u postcss-calc -u postcss-import-url -u autoprefixer -u cssnano -o index.css index.pcss",
     "build": "concurrently \"npm run lsc\" \"npm run pug\" \"npm run pcss\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "concurrently": "^2.2.0",
+    "cssnano": "^3.7.4",
     "jstransformer-markdown-it": "^0.2.3",
     "livescript": "^1.5.0",
     "postcss-calc": "^5.3.1",
