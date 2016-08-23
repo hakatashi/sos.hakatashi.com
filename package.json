@@ -7,7 +7,7 @@
     "lsc": "lsc -co . .",
     "pug": "pug index.pug",
     "less": "lessc index.less > index.css",
-    "build": "npm run lsc && npm run pug && npm run less",
+    "build": "concurrently \"npm run lsc\" \"npm run pug\" \"npm run less\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +26,8 @@
     "less": "^2.7.1",
     "livescript": "^1.5.0",
     "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   }
 }
