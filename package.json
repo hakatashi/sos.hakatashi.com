@@ -22,10 +22,13 @@
   },
   "homepage": "https://github.com/hakatashi/sos.hakatashi.com#readme",
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "concurrently": "^2.2.0",
     "jstransformer-markdown-it": "^0.2.3",
     "livescript": "^1.5.0",
     "postcss-cli": "^2.5.2",
+    "postcss-import-url": "^2.1.0",
+    "precss": "^1.4.0",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
