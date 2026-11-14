@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Send SOS to hakatashi</title><link rel="stylesheet" href="index.css"><link rel="icon" sizes="any" href="icon.svg" type="image/svg+xml"><link rel="mask-icon" href="icon.svg" color="black" type="image/svg+xml"><script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.js"></script><script src="https://code.getmdl.io/1.2.0/material.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script><script src="index.js"></script></head><body><a class="github-fork-ribbon" href="https://github.com/hakatashi/sos.hakatashi.com" title="Fork me on GitHub">Fork me on GitHub</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="100 0 600 600" class="icon">
+	<path fill="yellow" d="M228.9 135.6L529 286.3v219l30.8-23.5V263.2L259.3 112.3z"/>
+	<path fill="yellow" d="M499.4 309.3L199.2 158.4l-35.3 27v219l299.9 150.7 35.6-27.2z"/>
+	<path fill="yellow" d="M318.2 67.4l-29.1 22.1 300.2 150.9V459l28.8-21.9v-219z"/>
+</svg>
+<div class="head-area"><div class="head-wrap"><h1>Send SOS to hakatashi</h1><div class="morse"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dash"></div><div class="dash"></div><div class="dash"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div></div><div class="description"><p>このページは、<a href="https://twitter.com/hakatashi">@hakatashi</a>に<strong>超緊急</strong>のメッセージを送信するためのページです。</p>
+<p>以下のような場合にお使いください。</p>
+<ul>
+<li>hakatashiが待ち合わせに現れない。連絡もつかないしどう考えても寝坊している。</li>
+<li>鍵のかかった部屋から煙が出ている。中を確かめたいが鍵はhakatashiが持っている。</li>
+<li>hakatashiが管理しているサーバーが落ちている。10分以内に再稼働しないと地球がヤバい。</li>
+</ul>
+<p>このページからSOSを送信すると、以下の処理が<strong>全て</strong>行われます。</p>
+<ul>
+<li>hakatashi宅のRaspberryPiから大音量でブザー鳴動</li>
+<li>hakatashiのスマホのマナーモードを解除</li>
+<li>hakatashiのスマホにSMSを送信</li>
+<li>hakatashiのスマホに通知を送信</li>
+<li>hakatashiのスマホから<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%81%E3%83%BC">Avicii</a>の楽曲をランダムに再生</li>
+<li>hakatashi宛にTwitterでDMを送信</li>
+<li>hakatashiのメールアドレス宛にメールを送信</li>
+<li>hakatashiにSlackでメッセージを送信</li>
+<li>hakatashiにPushBulletでメッセージを送信</li>
+<li>hakatashiに<a href="https://www.justyo.co/">Yo</a>を送信</li>
+</ul>
+<p>SOSを送信するには以下のフォームを埋めて送信ボタンを押してください。</p>
+</div><form><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><textarea class="mdl-textfield__input" type="text" rows="5" name="text" required></textarea><label class="mdl-textfield__label" for="text">メッセージ</label><span class="mdl-textfield__error">メッセージを入力してください</span></div><p class="sos-label">「SOS」を表すUnicode文字を入力してください。</p><div class="sos-field mdl-textfield mdl-js-textfield"><div class="sos-wrap">U+<input class="sos-input mdl-textfield__input" type="text" name="key" pattern="[0-9a-fA-F]{4,5}" maxlength="5" required></div><span class="mdl-textfield__error">有効なコードポイントを指定してください</span></div><div class="button-area"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">SOSを送信する</button></div><p>同一IPからSOSを送信できるのは1日に3回までです。(認証失敗・送信失敗を含む)</p></form><dialog class="confirm mdl-dialog"><h2 class="mdl-dialog__title">送信確認</h2><div class="mdl-dialog__content"><p>本当にSOSを送信しますか? 同一IPからSOSを送信できるのは1日に3回までです。(認証失敗・送信失敗を含む)</p></div><div class="mdl-dialog__actions"><button class="submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">送信する</button><button class="close mdl-button">やめる</button></div></dialog><dialog class="result mdl-dialog"><h2 class="mdl-dialog__title">送信結果</h2><div class="mdl-dialog__content"><div class="mdl-spinner mdl-js-spinner is-active"></div><div class="content-body"></div><div class="mdl-list"></div></div><div class="mdl-dialog__actions"><button class="close mdl-button">OK</button></div></dialog></body></html>
